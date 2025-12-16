@@ -16,32 +16,33 @@ END INSTRUCTIONS. */
   box-sizing: border-box;
 }
 .wrapper {
-  display: flex;
-  align-items: stretch;
   max-width: 960px;
   margin: 0 auto;
+  overflow: auto;
 }
 .sidebar {
   width: 220px;
+  height: 600px;
   border: 5px solid red;
   float: left;
 }
 .page {
-  flex: 1;
   border: 5px solid red;
   padding: 16px;
-  margin-left: 236px; /* 220px sidebar + 16px gap */
+  width: calc(100% - 236px);
+  float: left;
+  overflow: auto;
 }
 .row {
-  display: flex;
   margin-bottom: 16px;
   clear: both;
+  overflow: auto;
 }
 .box {
   border: 5px solid red;
 }
 .row-top .box-small {
-  width: 160px;
+  width: calc(25% - 12px);
   height: 140px;
   margin-right: 16px;
   float: left;
@@ -50,11 +51,12 @@ END INSTRUCTIONS. */
   margin-right: 0;
 }
 .mid-left {
-  width: 48%;
+  width: calc(50% - 8px);
   margin-right: 16px;
   float: left;
 }
 .box-wide {
+  width: 100%;
   height: 95px;
   margin-bottom: 16px;
 }
@@ -62,24 +64,24 @@ END INSTRUCTIONS. */
   margin-bottom: 0;
 }
 .box-big {
-  width: 52%;
+  width: calc(50% - 8px);
   height: 210px;
   float: right;
 }
 .row-bottom .box-long {
-  width: 65%;
+  width: calc(65% - 8px);
   height: 160px;
   margin-right: 16px;
   float: left;
 }
 .box-bottom-right {
-  width: 33%;
+  width: calc(35% - 8px);
   height: 160px;
   float: right;
 }
 @media (max-width: 750px) {
   .wrapper {
-    flex-direction: column;
+    margin: 0;
   }
   .sidebar {
     width: 100%;
@@ -89,9 +91,10 @@ END INSTRUCTIONS. */
   .page {
     width: 100%;
     margin-left: 0;
+    padding: 16px;
   }
   .row {
-    flex-direction: column;
+    clear: both;
   }
   .row-top .box-small,
   .mid-left,

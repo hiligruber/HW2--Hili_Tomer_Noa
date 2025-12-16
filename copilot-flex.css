@@ -56,9 +56,11 @@ END INSTRUCTIONS. */
 }
 .wrapper {
   display: flex;
+  align-items: stretch;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0;
+  gap: 0;
 }
 .sidebar {
   width: 220px;
@@ -68,47 +70,45 @@ END INSTRUCTIONS. */
   flex: 1;
   border: 5px solid red;
   padding: 16px;
-  margin-left: 16px;
 }
 .row {
   display: flex;
+  gap: 16px;
   margin-bottom: 16px;
 }
 .box {
   border: 5px solid red;
 }
-.row-top .box-small {
-  width: 160px;
-  height: 140px;
-  margin-right: 16px;
+.row-top {
+  display: flex;
+  gap: 16px;
 }
-.row-top .box-small:last-child {
-  margin-right: 0;
+.row-top .box-small {
+  flex: 1 1 0;
+  height: 140px;
 }
 .mid-left {
   display: flex;
   flex-direction: column;
-  width: 48%;
-  margin-right: 16px;
+  gap: 16px;
+  flex: 1 1 0;
 }
 .box-wide {
   height: 95px;
-  margin-bottom: 16px;
 }
 .mid-left .box-wide:last-child {
   margin-bottom: 0;
 }
 .box-big {
-  width: 52%;
+  flex: 1 1 0;
   height: 210px;
 }
 .row-bottom .box-long {
-  width: 65%;
+  flex: 0 0 calc(65% - 8px);
   height: 160px;
-  margin-right: 16px;
 }
 .box-bottom-right {
-  width: 35%;
+  flex: 0 0 calc(35% - 8px);
   height: 160px;
 }
 @media (max-width: 750px) {
