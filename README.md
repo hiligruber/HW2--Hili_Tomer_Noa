@@ -12,15 +12,3 @@ The layout was implemented using:
 ## Live Site (GitHub Pages)
 https://hiligruber.github.io/HW2--Hili_Tomer_Noa/
 
-## Pages
-- Plain CSS – Manual:
-  https://hiligruber.github.io/HW2--Hili_Tomer_Noa/manual-plain.html
-
-- Plain CSS – Copilot:
-  https://hiligruber.github.io/HW2--Hili_Tomer_Noa/copilot-plain.html
-
-- Flexbox – Copilot:
-  https://hiligruber.github.io/HW2--Hili_Tomer_Noa/copilot-flex.html
-
-- Bootstrap – Copilot:
-  https://hiligruber.github.io/HW2--Hili_Tomer_Noa/copilot-bootstrap.html
